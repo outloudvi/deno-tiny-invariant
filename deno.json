@@ -1,0 +1,12 @@
+{
+    "name": "@outloudvi/tiny-invariant",
+    "version": "0.0.1",
+    "exports": "./src/tiny-invariant.ts",
+    "publish": {
+        "include": [
+            "LICENSE",
+            "README.md",
+            "src/**/*.ts"
+        ]
+    }
+}

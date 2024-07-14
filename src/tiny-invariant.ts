@@ -1,4 +1,4 @@
-const isProduction: boolean = process.env.NODE_ENV === 'production';
+const isProduction: boolean = Deno.env.get('NODE_ENV') === 'production';
 const prefix: string = 'Invariant failed';
 
 /**
