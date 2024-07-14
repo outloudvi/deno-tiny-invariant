@@ -1,4 +1,8 @@
-const isProduction: boolean = Deno.env.get('NODE_ENV') === 'production';
+const isProduction: boolean = (
+  typeof Deno !== 'undefined' ? Deno.env.get('NODE_ENV') : // Deno
+  typeof process != "undefined" ? process?.env?.NODE_ENV : // Bun, Node.js
+  'production' // Cloudflare Workers, Browser
+) === 'production';
 const prefix: string = 'Invariant failed';
 
 /**
